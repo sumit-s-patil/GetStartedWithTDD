@@ -56,13 +56,13 @@ namespace TDDPractice.UnitTests
 
         private static bool IsLeapYear(int year)
         {
-            if (year < 0)
+            if (year is < 0)
                 throw new ArgumentException("Year should not be negative");
 
-            if (year % 400 == 0)
+            if (year % 400 is 0)
                 return true;
 
-            if (year % 4 == 0 && year % 100 != 0)
+            if (year % 4 is 0 && year % 100 is not 0)
                 return true;
 
             return false;
