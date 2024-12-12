@@ -50,7 +50,7 @@
                 throw new ArgumentException("Position cannot be negative");
 
             if (position is > MaxPosition)
-                throw new ArgumentOutOfRangeException("Position exceeds the supported limit");
+                throw new ArgumentOutOfRangeException(nameof(position), "Position exceeds the supported limit");
 
             if (position is 0 or 1) return position;
 
